@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 160px;
+    background-color: #ddd5d5;
+}
+.nav{
+    margin-top:25px;
+    color:rgb(90, 76, 76)
+}
+.nav h1{
+    font-size: 50px;
+}
+.nav-bar ul{
+    display:flex;
+    list-style: none;
+    gap:50px;
+    margin-top: 25px;  
+}
+.nav-bar a{
+    color:rgb(138, 116, 116);
+    font-size: 20px;
+}
+.intro{
+    margin: 25px;
+    display: flex;
+    gap:50px;
+}
+.intro img{
+    height:400px
+}
+.intro .about{
+    height:350px;
+   width:400px
+}
+.intro .about p{
+    font-size: 25px;
+}
