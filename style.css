@@ -1,43 +1,134 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
-header{
+
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 160px;
     background-color: #ddd5d5;
 }
-.nav{
-    margin-top:25px;
-    color:rgb(90, 76, 76)
+
+.nav {
+    margin-top: 25px;
+    color: rgb(90, 76, 76)
 }
-.nav h1{
+
+.nav h1 {
     font-size: 50px;
 }
-.nav-bar ul{
-    display:flex;
+
+.nav-bar ul {
+    display: flex;
     list-style: none;
-    gap:50px;
-    margin-top: 25px;  
+    gap: 50px;
+    margin-top: 25px;
 }
-.nav-bar a{
-    color:rgb(138, 116, 116);
+
+.nav-bar a {
+    color: rgb(138, 116, 116);
     font-size: 20px;
 }
-.intro{
+
+.intro {
     margin: 25px;
     display: flex;
-    gap:50px;
+    margin-left: 150px;
+    flex-wrap: wrap;
 }
-.intro img{
-    height:400px
+
+.intro img {
+    height: 500px
 }
-.intro .about{
-    height:350px;
-   width:400px
+
+.intro-a {
+    margin-left: 250px;
 }
-.intro .about p{
+
+.intro-a h2 {
+    font-size: 55px;
+    margin-top: 50px;
+    color: rgb(56, 55, 53);
+    font-weight: lighter
+}
+
+.intro-a p {
     font-size: 25px;
+    width: 550px;
+    margin-top: 100px;
+    color: rgb(199, 176, 152);
+    font-weight: lighter;
+}
+
+.product {
+    background-color: #f9f6f6;
+}
+
+.pro {
+    display: flex;
+    justify-content: center;
+}
+
+.btn1 {
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 5rem;
+    margin: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    overflow-x: scroll;
+}
+
+.contect-us {
+    display: flex;
+    justify-content: center;
+}
+
+.con-btn {
+    background-color: #988e8e;
+    color: rgb(29, 28, 28);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.top-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    margin: 15px;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+}
+
+.grid2 button {
+    border-radius: 150px;
 }
