@@ -269,7 +269,7 @@ border-radius: 5px;
     border-radius: 5px;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@media (max-width:855px) {
+@media (max-width:555px) {
     * {
         margin: 0;
         padding: 0;
