@@ -4,36 +4,49 @@
     overflow-x: hidden;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
+body{
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+section{
+    background-color: #fff;
+    margin: 25px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(3, 3, 3, 0.3);
+}
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ddd5d5;
+    background-color: #202020;
     padding: 10px;
 }
 
 .nav {
+    
     margin-top: 25px;
-    color: rgb(90, 76, 76)
 }
 
 .nav h1 {
-    font-size: 50px;
+    font-size: 3em;
+    color: white;
 }
 
 .nav-bar ul {
     display: flex;
     list-style: none;
-    gap: 50px;
-    margin-top: 25px;
+    gap: 2em;
+    margin: 0 15px;
 }
-
-.nav-bar a {
-    color: rgb(138, 116, 116);
+.nav-bar ul li a {
+    color: #96989f;
+    text-decoration: none;
     font-size: 20px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
-
 .intro {
     margin: 25px;
     display: flex;
@@ -63,11 +76,6 @@ header {
     color: rgb(199, 176, 152);
     font-weight: lighter;
 }
-
-.product {
-    background-color: #f9f6f6;
-}
-
 .pro {
     display: flex;
     justify-content: center;
@@ -117,21 +125,24 @@ header {
 .contect-us {
     display: flex;
     justify-content: center;
+    margin: 10px;
 }
 
 .con-btn {
-    background-color: #988e8e;
-    color: rgb(29, 28, 28);
+    background: linear-gradient(45deg, #0b0000, #696b77);
+    color: rgb(253, 251, 251);
+    font-weight: bold;
+    font-size: 25px;
     border: none;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 10px;
+    width:8em;
+    border-radius: 10px;
+    cursor: grab;
 }
-
 .top-product {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f1f1f1;
 }
 
 .grid-1 {
@@ -225,10 +236,13 @@ table {
 }
 
 footer {
-    margin: 2px;
+    margin: 25px;
+    border-radius: 1em;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3)
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* shop page */
 .shop-a {
     max-width: 1200px;
     margin: auto;
@@ -270,36 +284,26 @@ border-radius: 5px;
 }
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media (max-width:555px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
     header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #ddd5d5;
         padding: 10px;
     }
-    
+    section{
+        margin: 10px;
+    }
     .nav {
         margin-top: 5px;
     }
-    
     .nav h1 {
-        font-size: 25px;
+        font-size: 3em;
     }
     
     .nav-bar ul {
         gap: 10px;
         margin-top: 15px;
     }
-    
-    .nav-bar a {
-        font-size: 14px;
+    .nav-bar ul li a{
+        font-size:0.90em;
     }
-    
     .intro {
         display: flex;
         margin-left: 11px;
@@ -336,17 +340,24 @@ border-radius: 5px;
         padding-left: 15px;
         padding-right: 20px;
     } 
-    .grid2 button {
-        border-radius: 50%;
-        width: 250px;
-    
+    .shop-a {
+       display: flex;
+       justify-content: center;    
     }
     
-    .view-btn button {
-        padding: 10px;
-        width: 150px;
-        border: none;
-        border-radius: 15px;
+    .shop-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+    table {
+        height: auto;
+        font-size: 12px;
+        margin: auto;
     }
     
+    footer {
+        margin: 10px;
+        background-color: #ece9e9;
+    }
 }
