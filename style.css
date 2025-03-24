@@ -4,12 +4,16 @@
     overflow-x: hidden;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
-body{
+
+body {
     background-color: #f4f4f4;
-    color: #333;
+    color: #333333;
     line-height: 1.6;
+    background-image: url('img1.jpg');
+    background: 
 }
-section{
+
+section {
     background-color: #fff;
     margin: 25px;
     border-radius: 15px;
@@ -17,15 +21,18 @@ section{
 }
 
 header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #202020;
+    background-color: #3f3f3f;
     padding: 10px;
 }
 
 .nav {
-    
+
     margin-top: 25px;
 }
 
@@ -40,6 +47,7 @@ header {
     gap: 2em;
     margin: 0 15px;
 }
+
 .nav-bar ul li a {
     color: #96989f;
     text-decoration: none;
@@ -47,6 +55,7 @@ header {
     letter-spacing: 1px;
     transition: color 0.3s ease;
 }
+
 .intro {
     margin: 25px;
     display: flex;
@@ -56,6 +65,7 @@ header {
 
 .intro img {
     height: 500px;
+    border-radius: 10px;
 }
 
 .intro-a {
@@ -73,9 +83,10 @@ header {
     font-size: 25px;
     width: 550px;
     margin-top: 100px;
-    color: rgb(199, 176, 152);
+    color: rgb(143, 84, 20);
     font-weight: lighter;
 }
+
 .pro {
     display: flex;
     justify-content: center;
@@ -94,6 +105,10 @@ header {
     align-items: center;
     border: none;
     border-radius: 5px;
+}
+
+.btn1 img {
+    height: 300px;
 }
 
 .btn1:hover {
@@ -135,10 +150,11 @@ header {
     font-size: 25px;
     border: none;
     padding: 10px;
-    width:8em;
+    width: 8em;
     border-radius: 10px;
     cursor: grab;
 }
+
 .top-product {
     display: flex;
     flex-direction: column;
@@ -150,6 +166,10 @@ header {
     grid-template-columns: repeat(5, 1fr);
     gap: 50px;
     margin: 15px;
+}
+
+.grid-1 img {
+    height: 450px;
 }
 
 /* .services {
@@ -174,9 +194,14 @@ header {
     overflow-x: auto;
 }
 
+.grid2 img {
+    height:250px
+}
+
 .grid2 button {
-    border-radius: 500px;
+    border-radius: 50%;
     width: 250px;
+    border:none
 
 }
 
@@ -265,97 +290,112 @@ footer {
     gap: 10px;
     height: 250px;
 }
-.aa{
-background-color: #e1dbdb;
-border-radius: 5px;
+
+.aa {
+    background-color: #e1dbdb;
+    border-radius: 5px;
 }
-.srv-grid2{
+
+.srv-grid2 {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 15px;
     gap: 20px;
 }
-.qa{
-    width:90%;
-    height:250px;
+
+.qa {
+    width: 90%;
+    height: 250px;
     background-color: #f0ecec;
     margin: auto;
     border-radius: 5px;
 }
+
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media (max-width:555px) {
     header {
         padding: 10px;
     }
-    section{
-        margin: 10px;
+
+    section {
+        margin: 1px;
     }
+
     .nav {
         margin-top: 5px;
     }
+
     .nav h1 {
         font-size: 3em;
     }
-    
+
     .nav-bar ul {
         gap: 10px;
         margin-top: 15px;
     }
-    .nav-bar ul li a{
-        font-size:0.90em;
+
+    .nav-bar ul li a {
+        font-size: 12px;
     }
+
     .intro {
         display: flex;
         margin-left: 11px;
         justify-content: center;
     }
+
     .intro-a {
         margin-left: 15px;
     }
-    
+
     .intro img {
         height: 400px
     }
+
     .intro-a h2 {
         font-size: 25px;
         margin-top: 20px;
     }
-    
+
     .intro-a p {
         font-size: 16px;
         width: auto;
         margin-top: 15px;
 
-    }  
+    }
+
     .pro h2 {
         font-size: 25px;
     }
+
     .grid {
         gap: 15px;
     }
-    
+
     .grid-1 {
-        grid-template-columns: repeat(2, 2fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 15px;
         padding-left: 15px;
         padding-right: 20px;
-    } 
-    .shop-a {
-       display: flex;
-       justify-content: center;    
     }
-    
+
+    .shop-a {
+        display: flex;
+        justify-content: center;
+    }
+
     .shop-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 20px;
     }
+
     table {
         height: auto;
         font-size: 12px;
         margin: auto;
     }
-    
+
     footer {
         margin: 10px;
         background-color: #ece9e9;
