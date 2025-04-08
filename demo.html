@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverable Menu with List</title>
+<style>
+    /* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+}
+
+.nav-bar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-bar > li {
+    position: relative;
+}
+
+/* Style for main menu items */
+/* .menu-link {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+} */
+
+/* .menu-link:hover {
+    background-color: #575757;
+} */
+
+/* Initially hide submenus */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 200px;
+}
+
+/* Style for submenu items */
+.submenu li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background-color: #575757;
+}
+
+/* Show submenu when hovering over the menu item */
+.menu-item:hover .submenu {
+    display: block;
+}
+</style>
+
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-bar">
+            <!-- Main Menu Item with Dropdown -->
+            <li class="menu-item">
+                <a href="#" class="menu-link">Menu 1</a>
+                <ul class="submenu">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item">
+                <a href="#" class="menu-link">Menu 2</a>
+                <ul class="submenu">
+                    <li><a href="#">Item A</a></li>
+                    <li><a href="#">Item B</a></li>
+                    <li><a href="#">Item C</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item">
+                <a href="#" class="menu-link">Menu 3</a>
+                <ul class="submenu">
+                    <li><a href="#">Option X</a></li>
+                    <li><a href="#">Option Y</a></li>
+                    <li><a href="#">Option Z</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script> </script>
+</body>
+</html>

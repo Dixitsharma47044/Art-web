@@ -1,0 +1,93 @@
+/* General styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f4f4;
+    color: #333333;
+    line-height: 1.6;
+    background-image: url('bgc-a.webp');
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Section styles */
+section {
+    background-color: rgba(255, 255, 255, 0.788); 
+    margin: 2em;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 15px rgba(4, 5, 4, 0.3);
+    margin-top: 2em;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+}
+
+/* Grid Layout */
+.grid, .grida, .gridb, .gridc {
+    display: flex;
+    gap: 5rem;
+    margin: 1.5rem;
+    padding: 25px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Ensures items are aligned in a row */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.grid::-webkit-scrollbar, .grida::-webkit-scrollbar, .gridb::-webkit-scrollbar, .gridc::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+.grid button, .grida button, .gridb button, .gridc button {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.grid img, .grida img, .gridb img, .gridc img {
+    width: 150px;
+    height: auto;
+    display: inline-block;
+}
+
+/* Buttons and hover effects */
+.btn1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.50s ease;
+}
+
+.btn1 img {
+    height: 25rem;
+    border-radius: 15px;
+}
+
+.btn1:hover {
+    transform: scale(1.1);
+    opacity: 2;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 555px) {
+    .grid, .grida, .gridb, .gridc {
+        gap: 10px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .btn1 img {
+        height: 15rem;
+    }
+}

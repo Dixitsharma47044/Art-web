@@ -1,6 +1,8 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
@@ -10,38 +12,73 @@ body {
     line-height: 1.6;
     background-image: url('bgc-a.webp');
     background-attachment: fixed;
+    overflow-x: hidden;
    
+} */
+/* General styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-section {
-    background-color: rgba(255, 255, 255, 0.917); 
-    margin: 25px;
-    border-radius: 15px;
-    box-shadow: 10px 10px 15px rgba(4, 5, 4, 0.3);
-    /* opacity:0.899; */
-    margin-top: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-bottom: 100px;
-    padding: 30px;
+/* Body */
+body {
+    background-color: #f4f4f4;
+    color: #333333;
+    line-height: 1.6;
+    background-image: url('bgc-a.webp');
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
+
+/* Section styles */
+section {
+    background-color: rgba(255, 255, 255, 0.788); 
+    margin: 2em;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 15px rgba(4, 5, 4, 0.3);
+    margin-top: 2em;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+}
+
+/* Grid Layout */
+.grid, .grida, .gridb, .gridc {
+    display: flex;
+    gap: 5rem;
+    margin: 1.5rem;
+    padding: 25px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Ensures items are aligned in a row */
+    scroll-behavior: smooth; 
+}
+
+.grid::-webkit-scrollbar, .grida::-webkit-scrollbar, .gridb::-webkit-scrollbar, .gridc::-webkit-scrollbar {
+     display: none; /*Hide the scrollbar*/
+} 
 
 header {
     position: sticky;
     z-index: 1;
     top: 0px;
     border-radius: 15px;
-    margin: 20px;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.921);
-    padding: 10px;
+    padding: 1rem;
 }
 
 .nav {
     align-content: center;
-    margin-top: 25px;
+    margin-top: 0.25em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,46 +93,45 @@ header {
     display: flex;
     list-style: none;
     gap: 2em;
-    margin: 0 15px;
+    margin: 0 1rempx;
 }
 
 .nav-bar ul li a {
     color: #96989f;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.02rem;
     letter-spacing: 1px;
     transition: color 0.3s ease;
 }
 
-.intro {
-    margin: 25px;
-    display: flex;
-    margin-left: 150px;
-    flex-wrap: wrap;
+.int{
+    margin: 2rem;
+    margin-left: 5rem;
 }
-
+.intro{
+    width:38rem;
+    display: flex;
+    gap:12rem;
+}
 .intro img {
-    margin: 15px;
-    height: 600px;
-    border-radius: 10px;
+    width: 100%;  
+    height:auto;       
+    max-width: 100%;      
+    border-radius: 10px
     
 }
 
-.intro-a {
-    margin-left: 250px;
-}
-
 .intro-a h2 {
-    font-size: 55px;
-    margin-top: 50px;
+    font-size: 4rem;
+    margin-top: 3rem;
     color: rgb(56, 55, 53);
     font-weight: lighter
 }
 
 .intro-a p {
-    font-size: 25px;
-    width: 550px;
-    margin-top: 100px;
+    font-size: 2rem;
+    width: 35rem;
+    margin-top: 5rem;
     color: rgb(143, 84, 20);
     font-weight: lighter;
 }
@@ -106,7 +142,7 @@ header {
 }
 
 .pro h2 {
-    font-size: 50px;
+    font-size: 3.5rem;
     color: rgb(89, 101, 101)
 }
 
@@ -120,7 +156,7 @@ header {
 }
 
 .btn1 img {
-    height: 450px;
+    height: 25rem;
     border-radius: 15px;
 }
 
@@ -128,14 +164,14 @@ header {
     transform: scale(1.1);
     opacity: 2;
 }
-.grid {
+.grid,.grida,.gridb,.gridc {
     display: grid;
-    grid-template-columns: repeat(18, 1fr);
+    grid-template-columns: repeat(20, 1fr);
     gap: 5rem;
-    margin: 15px;
+    margin: 1.5rem;
     padding: 25px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 2rem;
+    margin-right: 2rem;
     overflow-x: scroll;
 }
 
@@ -157,76 +193,23 @@ header {
     border-radius: 10px;
     cursor: grab;
 }
-
-.top-product {
+.top{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
-
-.grid-1 {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 5rem;
-    margin: 15px;
-    padding: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    overflow-x: scroll;
-    width: 90%;
-}
-.btn2 {
+.top-btn{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: none;
-    border-radius: 5px;
-    transition: transform 0.50s ease; 
-}
-
-.btn2 img {
-    height: 450px;
-    border-radius: 15px;
-}
-
-.btn2:hover {
-    transform: scale(1.1);
-    opacity: 2;
+    justify-content: center;
 }
 
 
-/* .services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
 .our-svr {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.grid2 {
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    gap: 5rem;
-    margin: 15px;
-    padding: 25px;
-    margin-left: 50px;
-    margin-right: 50px;
-    overflow-x: auto;
-}
 
-.grid2 img {
-    height:250px
-}
-
-.grid2 button {
-    border-radius: 50%;
-    width: 250px;
-    border:none
-
-}
 
 .view-btn {
     display: flex;
@@ -288,11 +271,16 @@ footer {
     border-radius: 1em;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3)
 }
+.Engv{
+    display: flex;
+    justify-content: center;
+}
+
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* shop page */
 .shop-a {
-    max-width: 1100px;
+    max-width: 90vw;
     margin: auto;
     align-content: center;
     margin-top: 15px;
@@ -301,7 +289,7 @@ footer {
 
 .shop-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 10px;
     gap:50px
 
@@ -327,7 +315,7 @@ footer {
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.srv-grid1 {
+.srv-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -339,7 +327,7 @@ footer {
     border-radius: 5px;
 }
 
-.srv-grid2 {
+.srv-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 15px;
@@ -356,8 +344,13 @@ footer {
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media (max-width:555px) {
+
     header {
+        margin: 2px;
         padding: 10px;
+    }
+    body{
+        overflow-x: hidden;
     }
 
     section {
@@ -385,16 +378,20 @@ footer {
         display: flex;
         margin-left: 11px;
         justify-content: center;
+        flex-direction: column;
+        gap:1rem
+    }
+    .int{
+        margin: 1px;
+        margin-right: 5px;
     }
 
     .intro-a {
-        margin-left: 15px;
+        margin-left: 1px;
     }
-
-    .intro img {
-        height: 400px
+    .intro img{
+        width:400px;
     }
-
     .intro-a h2 {
         font-size: 25px;
         margin-top: 20px;
@@ -411,15 +408,14 @@ footer {
         font-size: 25px;
     }
 
-    .grid {
-        gap: 15px;
+    .grid,.grida,.gridb {
+        gap: 10px;
+        margin-left: 2px;
+        margin-right: 2px;
     }
-
-    .grid-1 {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 15px;
-        padding-left: 15px;
-        padding-right: 20px;
+    .btn1 img {
+        height: 25rem;
+        border-radius: 15px;
     }
 
     .shop-a {
