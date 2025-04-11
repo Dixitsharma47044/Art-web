@@ -20,7 +20,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Body */
@@ -47,7 +46,7 @@ section {
 }
 
 /* Grid Layout */
-.grid, .grida, .gridb, .gridc {
+/* .grid, .grida, .gridb, .gridc {
     display: flex;
     gap: 5rem;
     margin: 1.5rem;
@@ -55,9 +54,19 @@ section {
     margin-left: 2rem;
     margin-right: 2rem;
     overflow-x: auto; /* Enables horizontal scrolling */
-    white-space: nowrap; /* Ensures items are aligned in a row */
-    scroll-behavior: smooth; 
-}
+    /* white-space: nowrap; Ensures items are aligned in a row */
+    /* scroll-behavior: smooth;  */
+/* }  */
+.grid, .grida, .gridb, .gridc {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 5rem;
+    margin: 1.5rem;
+    padding: 25px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+} 
 
 .grid::-webkit-scrollbar, .grida::-webkit-scrollbar, .gridb::-webkit-scrollbar, .gridc::-webkit-scrollbar {
      display: none; /*Hide the scrollbar*/
@@ -91,10 +100,14 @@ header {
 
 .nav-bar ul {
     display: flex;
+    flex-wrap: wrap; /* allow wrapping */
     list-style: none;
     gap: 2em;
-    margin: 0 1rempx;
+    margin: 0 1rem;
+    justify-content: center; /* center links */
+    padding: 0;
 }
+
 
 .nav-bar ul li a {
     color: #96989f;
@@ -104,36 +117,37 @@ header {
     transition: color 0.3s ease;
 }
 
-.int{
-    margin: 2rem;
-    margin-left: 5rem;
-}
-.intro{
-    width:38rem;
+.int {
     display: flex;
-    gap:12rem;
+    flex-wrap: wrap;  /* Ensures content wraps on smaller screens */
+    justify-content: flex-start;  /* Aligns content to the left */
+    gap: 5rem;  /* Adds space between image and text */
 }
-.intro img {
-    width: 100%;  
-    height:auto;       
-    max-width: 100%;      
-    border-radius: 10px
-    
+
+/* Styling for the image */
+.int img {
+    width: 35vw;  /* Makes the image responsive based on the viewport width */
+    max-width: 100%;  /* Prevents image from exceeding container width */
+    height: auto;  /* Keeps the aspect ratio of the image */
+    border-radius: 15px;
+}
+
+/* Styling for the text content */
+.intro-a {
+    max-width: 45vw;  /* Limit the width of the text container for better readability */
+    text-align: left;  /* Aligns text to the left */
 }
 
 .intro-a h2 {
-    font-size: 4rem;
-    margin-top: 3rem;
-    color: rgb(56, 55, 53);
-    font-weight: lighter
+    font-size: 5rem;
+    color: #333;
+    margin-bottom: 1rem;
 }
 
 .intro-a p {
-    font-size: 2rem;
-    width: 35rem;
-    margin-top: 5rem;
-    color: rgb(143, 84, 20);
-    font-weight: lighter;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
 }
 
 .pro {
@@ -223,9 +237,13 @@ header {
     border: none;
     border-radius: 15px;
 }
+.letter{
+    display: flex;
+    flex-direction: column;
+
+}
 
 .insta-btn {
-    display: flex;
     gap: 25px;
     background-color: #c7c6c6;
 }
@@ -242,14 +260,13 @@ header {
 
 .insta-btn button {
     margin: 10px;
-    margin-left: 35%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 20px;
 }
 
 .insta-btn p {
-    width: 400px;
+    width: auto;
 }
 
 .email {
@@ -349,10 +366,20 @@ footer {
         margin: 2px;
         padding: 10px;
     }
-    body{
-        overflow-x: hidden;
-    }
-
+   
+        .shop-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* 1 column for small screens */
+            row-gap: 20px;
+            gap: 20px;
+        }
+    
+        .srv-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* 1 column for small screens */
+            gap: 20px;
+        }
+    
     section {
         margin: 10px;
     }
@@ -374,23 +401,33 @@ footer {
         font-size: 12px;
     }
 
-    .intro {
+    /* .intro {
         display: flex;
-        margin-left: 11px;
+        margin-left: 10px;
+        width:60vw;
         justify-content: center;
         flex-direction: column;
         gap:1rem
-    }
+    } */
+    /* .intro {
+        display: flex;
+        margin-left: 10px;
+        width: 100%; /* Make sure it doesn't exceed the container's width */
+        /* justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    } */ 
     .int{
         margin: 1px;
         margin-right: 5px;
+        display: block;
     }
 
     .intro-a {
         margin-left: 1px;
     }
-    .intro img{
-        width:400px;
+    .int img{
+        width:80vw;
     }
     .intro-a h2 {
         font-size: 25px;
@@ -439,4 +476,5 @@ footer {
         margin: 10px;
         background-color: #ece9e9;
     }
+    
 }
