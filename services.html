@@ -8,22 +8,32 @@
 </head>
 <body>
     <main>
-    <header>
-        <div class="nav">
-            <h1>Art Account</h1>
-        </div>
-        <div class="nav-bar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Scrapbook</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#">Workshop</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contect Us</a></li>
-            </ul>
-        </div>
-    </header>
+        <header>
+            <div class="nav">
+                <h1>Art Account</h1>
+                <div class="nav-bar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Scrapbook</a></li>
+                        <li>
+                            <select name="our services" id="services" onchange="location = this.value;">
+                                <option value="shop.html">Vintage Frames</option>
+                                <option value="shop.html">Scrapbook</option>
+                                <option value="engraving.html">Engraving</option>
+                                <option value="wedding-cards.html">Wedding Cards</option>
+                                <option value="bookmarks.html">Bookmarks</option>
+                                <option value="letter-scrolls.html">Handwritten Letter Scrolls</option>
+                            </select>
+                        </li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#">Workshop</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
 <section>
     <div class="srv">
         <h1>Our Services</h1>
