@@ -18,16 +18,17 @@ section {
     margin: 2em 2rem 3rem;
     border-radius: 2rem;
     box-shadow: 10px 10px 15px rgba(4, 5, 4, 0.3);
-    padding: 3rem;
+    padding: 1rem;
 }
 
 .grid, .grida, .gridb, .gridc {
     display: grid;
     grid-template-columns: repeat(50, 1fr);
-    gap: 5rem;
-    margin: 1.5rem 2rem;
-    padding: 25px;
+    gap: 15px;
+    margin: 0;
+    padding: 2rem;
     overflow-x: scroll;
+    position: relative;
 }
 
 .grid::-webkit-scrollbar, .grida::-webkit-scrollbar, .gridb::-webkit-scrollbar, .gridc::-webkit-scrollbar {
@@ -36,7 +37,6 @@ section {
 
 header {
     position: sticky;
-    z-index: 1;
     top: 0;
     margin: 2rem;
     padding: 1rem;
@@ -45,8 +45,9 @@ header {
     align-items: center;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.921);
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
 }
-
 .nav {
     display: flex;
     flex-direction: column;
@@ -68,6 +69,40 @@ header {
     justify-content: center;
     padding: 0;
 }
+
+.nav-bar li {
+    position: relative;
+    padding: 10px;
+}
+.nav-bar .services .dropdown {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: -50px;
+    background-color: #292e3a;
+    min-width: 200px;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.nav-bar .services:hover .dropdown {
+    display: block; 
+}
+
+
+.nav-bar .services .dropdown li {
+    padding: 3px;
+    margin-left: 40px;
+}
+
+.nav-bar .services .dropdown li a {
+    color: #fefefe;
+}
+
+.nav-bar .services .dropdown li a:hover {
+    background-color: #777171;
+}
+
 
 .nav-bar ul li a {
     color: #96989f;
@@ -131,6 +166,7 @@ header {
 .btn1 img, .btn1-shop img {
     height: 25vw;
     border-radius: 15px;
+    margin: 0;
 }
 
 
@@ -226,7 +262,7 @@ footer {
 .shop-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    gap: 25px;
     row-gap: 10px;
 }
 
@@ -254,7 +290,8 @@ footer {
 @media (max-width: 555px) {
     header {
         margin: 2px;
-        padding: 10px;
+        padding: 5px;
+        height:18vh;
     }
 
     .shop-grid, .srv-grid {
@@ -269,16 +306,16 @@ footer {
     }
 
     .nav {
-        margin-top: 5px;
+        margin-top: 3px;
     }
 
     .nav h1 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .nav-bar ul {
-        gap: 10px;
-        margin-top: 15px;
+        gap: 8px;
+        margin-top: 1px;
     }
 
     .nav-bar ul li a {
@@ -308,7 +345,7 @@ footer {
         margin-top: 15px;
     }
     .btn1 img{
-        height:45vw;
+        height:30vh
         
     }
 
@@ -343,6 +380,11 @@ footer {
     }
     .btn1-shop img{
         height:20vh
+    }
+}
+@media (max-width: 950px) {
+    .int img {
+        width: 80vw;
     }
 }
  
