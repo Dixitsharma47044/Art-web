@@ -1,91 +1,83 @@
-/* .grida {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 5rem;
-    margin: 15px;
-    padding: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    overflow-x: scroll;
-    width: 90%;
-} */
-/* .btn2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: none;
-    border-radius: 5px;
-    transition: transform 0.50s ease; 
-} */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Web</title>
+  <link rel="stylesheet" href="demo.css" />
+  <script src="script.js" defer></script>
+</head>
 
-/* .btn2 img {
-    height: 450px;
-    border-radius: 15px;
-}
+<body>
+  <main>
+    <header>
+      <div class="nav">
+        <h1>Art Account</h1>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Scrapbook</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Workshop</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-.btn2:hover {
-    transform: scale(1.1);
-    opacity: 2;
-} */
+    <section>
+      <div class="int">
+        <img src="img1.jpg" alt="Image description" class="image-lightbox" />
+        <div class="intro-a">
+          <h2>Lettering Buff</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Lightbox Images Example -->
+    <section>
+      <div class="vintage-frames">
+        <div class="pro">
+          <h2>Vintage Frames</h2>
+        </div>
+        <div class="grid">
+          <button class="btn1"><img src="img1.jpg" alt="" class="image-lightbox" /></button>
+          <button class="btn1"><img src="img9.jpg" alt="" class="image-lightbox" /></button>
+          <button class="btn1"><img src="img3.jpg" alt="" class="image-lightbox" /></button>
+          <button class="btn1"><img src="img4.jpg" alt="" class="image-lightbox" /></button>
+        </div>
+      </div>
+    </section>
 
-/* .services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-/* .gridb {
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    gap: 5rem;
-    margin: 15px;
-    padding: 25px;
-    margin-left: 50px;
-    margin-right: 50px;
-    overflow-x: auto;
-} */
+    <!-- Lightbox Modal with Navigation -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <div class="lightbox-content-container">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <button class="nav-btn left" onclick="changeImage('left')">&#10094;</button>
+        <img class="lightbox-content" id="lightbox-img" />
+        <button class="nav-btn right" onclick="changeImage('right')">&#10095;</button>
+      </div>
+    </div>
 
-/* .gridb img {
-    height:250px
-}
-
-.gridb button {
-    border-radius: 50%;
-    width: 250px;
-    border:none
-
-} */
-
-/* .intro-a {
-    margin-left: 250px;
-} */
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// document.addEventListener('DOMContentLoaded', function() {
-    //     var grid = document.querySelector('.grid');  // Target your grid container
-    //     var scrollSpeed = 1 ;  // Adjust speed as needed, higher value means slower scroll
-    //     var scrollInterval = 15;  // Interval time in milliseconds (lower value means faster)
-        
-    //     var intervalId; // This will store the interval ID for clearing later
-    
-    //     function autoScroll() {
-    //         grid.scrollLeft += scrollSpeed;  // Scroll horizontally
-    //         if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth) {
-    //             grid.scrollLeft = 0;  // Reset scroll to the start when it reaches the end
-    //         }
-    //     }
-    
-    //     // Start auto-scrolling
-    //     intervalId = setInterval(autoScroll, scrollInterval);
-    
-    //     // Pause scrolling when mouse enters a button in the grid
-    //     var buttons = document.querySelectorAll('.grid .btn1');
-    //     buttons.forEach(function(button) {
-    //         button.addEventListener('mouseenter', function() {
-    //             clearInterval(intervalId);  // Clear the interval to stop scrolling
-    //         });
-    
-    //         button.addEventListener('mouseleave', function() {
-    //             intervalId = setInterval(autoScroll, scrollInterval);  // Restart scrolling
-    //         });
-    //     });
-    // });
+    <footer>
+      <table>
+        <tr>
+          <th rowspan="6" colspan="3">
+            <h2>Art Account</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          </th>
+          <td>About</td>
+        </tr>
+        <tr><td>Services</td></tr>
+        <tr><td>Shop</td></tr>
+        <tr><td>Contact Us</td></tr>
+        <tr><td>Terms of Service</td></tr>
+        <tr><td>Shop Policies</td></tr>
+      </table>
+    </footer>
+  </main>
+</body>
+</html>

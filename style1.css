@@ -1,0 +1,326 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    color: #1f2937;
+    scroll-behavior: smooth;
+}
+:root {
+    --transition-default: 0.10s ease-in-out;
+    --transition-fast: 0.3s ease;
+    --hover-move-up: translateY(-15px);
+    --hover-scale-up: scale(1.05);
+}
+
+section {
+    background: #ffffff;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 95vw;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes sectionHoverAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.921);
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.25em;
+}
+
+.nav h1 {
+    font-size: 3em;
+    color: white;
+    animation: fadeInText 1s ease-out;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.nav-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 2em;
+    margin: 0 1rem;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-bar li {
+    position: relative;
+    padding: 10px;
+}
+
+.nav-bar .services .dropdown {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: -50px;
+    background-color: #292e3a;
+    min-width: 200px;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.nav-bar .services:hover .dropdown {
+    display: block; 
+}
+
+.nav-bar .services .dropdown li {
+    padding: 3px;
+    margin-left: 40px;
+}
+
+.nav-bar .services .dropdown li a {
+    color: #fefefe;
+}
+
+.nav-bar .services .dropdown li a:hover {
+    background-color: #777171;
+}
+
+.nav-bar ul li a {
+    color: #96989f;
+    text-decoration: none;
+    font-size: 1.02rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+/* .f-size {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+    
+    
+}
+.f-size span{
+    border:0.5px solid black;
+    padding:0.5rem;
+    border-radius: 10px;
+
+} */
+ .f-size {
+    font-size: 1.5rem;
+    color: #555; /* Keeping your original muted text */
+    margin-bottom: 1rem;
+}
+
+.f-size span {
+    /* border: 0.5px solid #1f2937; Dark gray from your existing palette */
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    background-color: #f3f4f6; /* Same as your body background */
+    color: #1f2937;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.f-size span:hover {
+    background-color: #e5e7eb; /* Slightly darker on hover */
+    color: #333; /* Consistent with your button text */
+    cursor: pointer;
+}
+
+
+
+.grid-v {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.btn4 {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+
+.btn4 img {
+    height: 100%;
+    width: 100%;
+    
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn4 img:hover {
+    transform: scale(1.1);
+}
+
+
+
+ .vf-a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem
+}
+.v-btn {
+    text-align: center;
+}
+
+.v-btn button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.v-btn button:hover {
+    background-color: #555;
+}
+
+.v-btn button a {
+    color: white;
+    text-decoration: none;
+}
+ .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+.footer-left {
+    flex: 1;
+    max-width: 500px;
+}
+
+.footer-left h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right li {
+    margin-bottom: 10px;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #f39c12;
+}
+@media (max-width: 555px) {
+    header {
+        margin: 2px;
+        padding: 5px;
+        height:18vh;
+    }
+
+    .scr-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    section {
+        margin: 2px;
+        padding:5px;
+        border-radius: 10px;
+    }
+
+    .nav {
+        margin-top: 3px;
+    }
+
+    .nav h1 {
+        font-size: 2em;
+    }
+
+    .nav-bar ul {
+        gap: 8px;
+        margin-top: 1px;
+    }
+
+    .nav-bar ul li a {
+        font-size: 12px;
+    }
+}
